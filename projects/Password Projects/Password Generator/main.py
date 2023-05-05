@@ -1,11 +1,19 @@
 import random
 import string
 
+WELCOME = """
+______________________________________
+| Welcome to this Password Generator |
+--------------------------------------\n
+"""
+THANKS = """
+___________________________________________
+| Thanks for using the Password Generator |
+-------------------------------------------\n
+"""
 
 def main():
-    print("_____________________________________")
-    print("| Welcome to this Password Generator |")
-    print("-------------------------------------\n")
+    print(WELCOME)
     try:
         length = int(
             input("how long do you want your password to be (minimum of 8 number)")
@@ -20,9 +28,7 @@ def main():
     all_characters = getCharacters()
     password = generatePassword(all_characters, password_length)
     print("\nYour password is: " + password)
-    print("__________________________________________")
-    print("| Thanks for using the Password Generator |")
-    print("------------------------------------------")
+    print(THANKS)
 
 
 def getPasswordLength():
